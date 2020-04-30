@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+
+        .container{
+            background-color: lightgray;
+            display: flex;
+            height: 500px;
+            justify-content: flex-start;  /*控制主軸內的item水平排列方式*/
+            align-items:stretch; /*控制叉軸的垂直排列方式*/
+            flex-direction: row;  /*主軸的方向性為水平or垂直 */
+            flex-wrap: wrap; /*item的排列是否換行*/
+            /* flex-flow = flex-direction:  + flex-wrap */
+            align-content: space-around; /*只有在flex-wrap: wrap下才有效用,參數值同justify-content*/
+        }
+        .container>div{
+            width: 100px;
+        }
+        .red{
+            background-color: lightpink;
+            height: 100px;
+            align-self: center; /*獨立對子項目操作參數值同align-items行為*/
+        }
+        .green{
+            background-color: lightgreen;
+            height: 200px;
+        }
+
+        .blue{
+            background-color: lightskyblue;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+
+    </div>
+</body>
+</html>

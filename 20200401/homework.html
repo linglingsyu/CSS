@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap');
+
+/* css reset */
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+
+
+        body {
+            line-height: 1;
+            position: relative;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* reset end================================ */
+
+
+        body {
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+        }
+
+        /*表格區*/
+
+        h1 {
+            margin: 45px auto 10px;
+            padding: 5px;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        table,
+        tr,
+        td {
+            width: 80%;
+            line-height: 2;
+            margin: 60px auto;
+        }
+
+        tr,
+        td {
+            width: 300px;
+            padding: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .item {
+            margin: 20px;
+        }
+
+        .item table tr:nth-child(odd) {
+            font-size: 14px;
+        }
+
+        .item table tr:first-child td:not(:last-child){
+            border-right: 1px solid #fff;
+        }
+
+        .item table tr:nth-child(odd) {
+            font-size: 20px;
+            border-top: #ccc 1px solid;
+        }
+
+        .item table tr:first-child {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 400;
+            border-top: transparent;
+        }
+
+        .item table tr:first-child td{
+            position:sticky;
+            top:5px;
+            background: linear-gradient(to bottom,#ccc,#fff);
+            border-right: 1px solid #fff;
+        }
+
+        img{
+            width: 50%;
+        }
+
+        img:hover{
+            opacity: 0.9;
+        }
+
+        .item table tr:nth-child(2) td{
+            padding: 20px;
+        }
+
+        .item table tr:nth-child(even):hover {
+            background-color: rgb(189, 144, 144, 0.2);
+        }
+
+        .item table tr:first-child:hover,.item table tr:nth-child(2):hover {
+            background-color: transparent;
+        }
+
+        /*選單區*/
+
+        .menu{
+            position: fixed;
+            top:10px;
+            left:60px;
+        }
+
+        .menu li{
+            line-height: 1.5;
+            padding:1px ;
+        }
+
+        .menu li a{
+            display: inline-block;
+            font-family:'Roboto', "新細明體";
+            text-decoration: none;
+            font-size: 8px;
+            color: #000;
+            margin-left: 5px;
+        }
+
+        .menu .top{
+            background-color: #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        .menu li a:hover{
+            color: rgb(189, 144, 144);
+        }
+
+        .menu .top:hover{
+            background-color: rgb(189, 144, 144,0.4);
+            color: #000;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>產品比較</h1>
+
+    <div class="item">
+        <table>
+            <tr id="color">
+                <td><img src="http://www.asus.com/media/global/products/HwvQuGIJyaNsoWEM/P_setting_xxx_0_90_end_230.png" alt="zenfone 5 (ZE620KL)"><br>
+                    zenfone 5 (ZE620KL)</td>
+                <td><img src="http://www.asus.com/media/global/products/E2hS4wNMijODMNuV/P_setting_xxx_0_90_end_230.png" alt="zenfone 6 (ZS630KL)"><br>
+                    zenfone 6 (ZS630KL)</td>
+                <td><img src="http://www.asus.com/media/global/products/m5wljeweeqwkzhxc/P_setting_xxx_0_90_end_230.png" alt="zenfone 6 Edtion 30"><br>
+                    zenfone 6 Edtion 30</td>
+                <td><img src="http://www.asus.com/media/TW/products/eKkQjUDvQnJHpHVn/P_setting_xxx_0_90_end_230.png" alt="zenfone 5Z (ZS630KL)"><br>
+                    zenfone 5Z (ZS630KL)</td>
+            </tr>
+
+            <tr>
+                <td id="weight"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td> 材質/顏色</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="system">2.5D 雙曲面玻璃 : 深海藍/星芒銀</span></td>
+                <td>2.5D 雙曲面玻璃 : 星空黑/Twilight Silver</td>
+                <td>2.5D 雙曲面玻璃 : Matte Black</td>
+                <td>2.5D 雙曲面玻璃 : 深海藍/星芒銀</td>
+            </tr>
+            <tr>
+                <td> 產品尺寸</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="cpu">153 x 75.65 x 7.7 mm (長x寬x高)</span></td>
+                <td>159.1 x 75.44 x 8.4 mm (長x寬x高)</td>
+                <td>159.1 x 75.44 x 8.4 mm (長x寬x高)</td>
+                <td>153 x 75.65 x 7.7 mm (長x寬x高)</td>
+            </tr>
+            <tr>
+                <td> 重量</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>165 g</td>
+                <td>190 g</td>
+                <td>190 g</td>
+                <td>165 g</td>
+            </tr>
+            <tr>
+                <td> 作業系統</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Android™ O</td>
+                <td>Android™ Pie™ 搭載新一代 ASUS ZenUI 6.0</td>
+                <td>Android™ Pie™ 搭載新一代 ASUS ZenUI 6.0</td>
+                <td><span id="screen">Android™ O 搭載新一代 ASUS ZenUI 5.0</span></td>
+            </tr>
+            <tr>
+                <td> 處理器</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>CPU:</strong><br>
+                    64位元 高通® 八核心處理器 Snapdragon™ 636 @1.8Ghz<br>
+                    <strong>GPU:</strong><br>
+                    Adreno™ 509</td>
+                <td><strong>CPU:</strong><br>
+                    Qualcomm® 八核心處理器 Snapdragon™ 855<br>
+                    <strong>GPU:</strong><br>
+                    Adreno™ 640</td>
+                <td><strong>CPU:</strong><br>
+                    Qualcomm® 八核心處理器 Snapdragon™ 855<br>
+                    <strong>GPU:</strong><br>
+                    Adreno™ 640</td>
+                <td><strong>CPU:</strong><br>
+                    64位元 高通® 八核心處理器 Snapdragon™ 845<br>
+                    <strong>GPU:</strong><br>
+                    Adreno™ 630</td>
+            </tr>
+            <tr>
+                <td> 螢幕</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6.2吋<br>
+                    <span id="ram">Full HD+ (2246 x 1080) IPS 全貼合螢幕</span><br>
+                    90% 螢幕佔比<br>
+                    高達 550 亮度<br>
+                   搭載濾藍光護眼模式<br>
+                    康寧強化玻璃2.5D 曲面玻璃<br>
+                    120˚超廣視角<br>
+                    <strong>觸控:</strong><br>
+                    十指觸控電容式感應
+                </td>
+                <td>6.4吋<br>
+                    Full HD+ (2340 x 1080) IPS 全貼合螢幕 <br>
+                    92% 螢幕佔比<br>
+                    高達 600 亮度<br>
+                    搭載濾藍光護眼模式<br>
+                    康寧強化玻璃696 % NTSC color gamut<br>
+                    <strong>觸控:</strong><br>
+                    十指觸控電容式感應
+                </td>
+                <td>6.4吋<br>
+                    Full HD+ (2340 x 1080) IPS 全貼合螢幕 <br>
+                    92% 螢幕佔比<br>
+                    高達 600 亮度<br>
+                    搭載濾藍光護眼模式<br>
+                    <span id="storage">康寧強化玻璃696 % NTSC color gamut</span><br>
+                    <strong>觸控:</strong><br>
+                    <span>十指觸控電容式感應</span>
+                </td>
+                <td>6.2吋<br>
+                    Full HD+ (2246 x 1080) IPS 全貼合螢幕<br>
+                    90% 螢幕佔比<br>
+                    高達 550 亮度<br>
+                    搭載濾藍光護眼模式<br>
+                    康寧強化玻璃2.5D 曲面玻璃<br>
+                    120˚超廣視角
+                </td>
+            </tr>
+            <tr>
+                <td> 記憶體</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>RAM 4GB</td>
+                <td>RAM 6GB / 8GB</td>
+                <td>RAM 12GB</td>
+                <td>RAM 6GB / 8GB</td>
+            </tr>
+            <tr id="battery">
+                <td> 儲存效能</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>內建儲存空間:<br>
+                    eMCP 64GB<br>
+                    <strong>Micro SD:</strong><br>
+                    Micro SD Card 最高支援至 2 TB<br><br>
+
+                    免費 1 年 100GB Google Drive 雲端儲存空間</td>
+                <td>內建儲存空間:<br>
+                    UFS 2.1 64GB / 128GB / 256GB<br>
+                    <strong>Micro SD:</strong><br>
+                    Micro SD Card 最高支援至 2 TB</td>
+                <td>內建儲存空間:<br>
+                    UFS 2.1 512GB<br>
+                    <strong>Micro SD:</strong><br>
+                    Micro SD Card 最高支援至 2 TB</td>
+                <td>內建儲存空間:<br>
+                    UFS 2.1 64GB / 128GB / 256GB<br>
+                    <strong id="sound">Micro SD:</strong><br>
+                    Micro SD Card 最高支援至 2 TB<br><br>
+
+                    免費 1 年 100GB Google Drive 雲端儲存空間</td>
+            </tr>
+            <tr>
+                <td> 電池</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3300mAh 內建式不可拆鋰電池</td>
+                <td>5000mAh 內建式不可拆鋰電池<br>
+                    QuickCharge 快充技術 4.0</td>
+                <td>5000mAh 內建式不可拆鋰電池<br>
+                    QuickCharge 快充技術 4.0</td>
+                <td>3300mAh 內建式不可拆鋰電池</td>
+            </tr>
+            <tr>
+                <td> 音效</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>喇叭 :<br>
+                   <span id="video">雙五磁喇叭提升音量與逼真享受</span><br>
+                    <strong>Mic:</strong><br>
+                    雙內建麥克風+降噪技術<br>
+                    廣播 :<br>
+                    FM Radio</td>
+                <td>喇叭 :<br>
+                    雙五磁喇叭提升音量與逼真享受<br>
+                    Hi-Res Audio 192kHz/24位元音頻標準，較CD音質佳4倍<br>
+                    DTS Headphone:X™ 技術 7.1 聲道環繞<br>
+                    PMIC 內建 NXP 智慧擴音機<br>
+                    <strong>Mic:</strong><br>
+                    雙內建麥克風+降噪技術<br>
+                    廣播 :<br>
+                    FM Radio</td>
+                <td>喇叭 :<br>
+                    雙五磁喇叭提升音量與逼真享受<br>
+                    Hi-Res Audio 192kHz/24位元音頻標準，較CD音質佳4倍<br>
+                    DTS Headphone:X™ 技術 7.1 聲道環繞<br>
+                    PMIC 內建 NXP 智慧擴音機<br>
+                    <strong>Mic:</strong><br>
+                    雙內建麥克風+降噪技術<br>
+                    廣播 :<br>
+                    FM Radio</td>
+                <td>喇叭 :<br>
+                    雙五磁喇叭提升音量與逼真享受<br>
+                    DTS Headphone:X™ 技術 7.1 聲道環繞<br>
+                    <strong>Mic:</strong><br>
+                    三內建麥克風搭載 ASUS 降噪技術<br>
+                    廣播 :<br>
+                    FM Radio</td>
+            </tr>
+            <tr>
+                <td> 視訊功能</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <br>
+                <td> 支援4K錄影<br>
+                   <span id="wireless">三軸電子防手震</span></td>
+                <td>4K UHD (3840 by 2160) video at 30 / 60 fps for main camera<br>
+                    30 fps for second camera<br>
+                    1080p FHD video recording at 30 / 60 fps<br>
+                    Motion Tracking video (1080p FHD video at 60 fps)<br>
+                    Time Lapse (4K UHD video)<br>
+                    Slow Motion video (1080p at 240 fps / 720p at 480 fps)</td>
+                <td>4K UHD (3840 by 2160) video at 30 / 60 fps for main camera<br>
+                    30 fps for second camera<br>
+                    1080p FHD video recording at 30 / 60 fps<br>
+                    Motion Tracking video (1080p FHD video at 60 fps)<br>
+                    Time Lapse (4K UHD video)<br>
+                   Slow Motion video (1080p at 240 fps / 720p at 480 fps)<span id="other"></span></td>
+                <td>支援4K錄影<br>
+                    三軸電子防手震</td>
+            <tr>
+                <td> 無線科技</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>802.11a/b/g/n/ac<br><span id="sim"></span><br><br>
+                    藍牙 V 5.0<br>
+                    Wi-Fi 無線網路</td>
+                <td >802.11a/b/g/n/ac/2.4GHz//5 GHz<br>
+                    WLAN 802.11<br>
+                    2x2MIMO Support<br>
+                    藍牙 V 5.0 +A2DP +EDR<br>
+                    支援 Wi-Fi direct</td>
+                <td>802.11a/b/g/n/ac/2.4GHz//5 GHz<br>
+                    WLAN 802.11<br>
+                    2x2MIMO Support<br>
+                    藍牙 V 5.0 +A2DP +EDR<br>
+                    支援 Wi-Fi direct</td>
+                <td>802.11a/b/g/n/ac<br>
+                    802.11<br>
+                    2.4 Ghz 2x2 MIMO Support<br>
+                    藍牙 V 5.0<br>
+                    Wi-Fi 無線網路</td>
+            </tr>
+            <tr>
+                <td> 其他功能</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>GPS/A-GPS/GLONASS/BDS</td>
+                <td>GPS/GLONASS/QZSS/BDS/GALILEO</td>
+                <td>GPS/GLONASS/QZSS/BDS/GALILEO</td>
+                <td>GPS/A-GPS/GLONASS/BDS</td>
+            </tr>
+            <tr>
+                <td id="nfc"> SIM 卡</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>雙SIM卡插槽<br>
+                    <span id="sensor">SIM 1: 2G/3G/4G Nano SIM 卡</span><br>
+                    SIM 2: 2G/3G/4G Nano SIM 卡<br>
+                   雙卡雙待<br>
+                    SIM2: nano SIM卡及microSD卡只能擇一使用</td>
+                <td>三卡插槽<br>
+                    SIM 1: 2G/3G/4G Nano SIM 卡<br>
+                    SIM 2: 2G/3G/4G Nano SIM 卡</td>
+                <td>三卡插槽<br>
+                    SIM 1: 2G/3G/4G Nano SIM 卡<br>
+                    SIM 2: 2G/3G/4G Nano SIM 卡</td>
+                <td>雙SIM卡插槽<br>
+                    SIM 1: 2G/3G/4G SIM 卡<br>
+                    SIM 2: 2G/3G/4G SIM 卡 </td>
+            </tr>
+            <tr>
+                <td id="io"> NFC</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>支援NFC</td>
+                <td>支援NFC</td>
+                <td>支援NFC</td>
+                <td>支援NFC</td>
+            </tr>
+            <tr>
+                <td> 感應器</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>重力感測器/電子羅盤/陀螺儀/距離感應器/光源感應器/色彩校正感應器/指紋辨識</td>
+                <td id="ac">重力感測器/電子羅盤/陀螺儀/距離感應器/霍爾效應感測器/光源感應器/IR傳感器/指紋辨識/G-Sensor</td>
+                <td>重力感測器/電子羅盤/陀螺儀/距離感應器/霍爾效應感測器/光源感應器/IR傳感器/指紋辨識/G-Sensor</td>
+                <td>重力感測器/電子羅盤/陀螺儀/距離感應器/光源感應器/色彩校正感應器/指紋辨識</td>
+            </tr>
+            <tr>
+                <td> I/O連接埠</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>USB type C 連結埠 2.0<br>
+                    3.5mm 耳機/麥克風</td>
+                <td >USB type C 連結埠 2.0<br>
+                    3.5mm 耳機/麥克風</td>
+                <td>USB type C 連結埠 2.0<br>
+                    3.5mm 耳機/麥克風</td>
+                <td>USB type C 連結埠 2.0<br>
+                    3.5mm 耳機/麥克風</td>
+            </tr>
+            <tr>
+                <td> 電源 AC</td>
+                <td id="accessories"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>輸出:<br>
+                    5 伏特 2 安培 10 瓦<br>
+                    輸入:<br>
+                    100-240伏特 AC, 50/60Hz通用<br>
+                    支援快充技術(標配)</td>
+                <td>輸出:<br>
+                    9 伏特 2 安培 18 瓦</td>
+                <td>輸出:<br>
+                    9 伏特 2 安培 18 瓦</td>
+                <td>輸出:<br>
+                    9 伏特 2 安培 18 瓦</td>
+                    
+            </tr>
+            <tr>
+                <td> 配件</td>
+                <td></td>
+                <td></td>
+                <td id="user"></td>
+            </tr>
+            <tr>
+                <td>耳機<br>
+                    頂針<br>
+                    充電器<br>
+                    Type C cable<br>
+                    透明保護軟殼</td>
+                <td>耳機<br>
+                    頂針<br>
+                    充電器<br>
+                    Type C cable<br>
+                    Transparent case</td>
+                <td>耳機<br>
+                    頂針<br>
+                    充電器<br>
+                    Type C cable<br>
+                    Transparent case</td>
+                <td>耳機<br>
+                    <span id="net">充電器</span><br>
+                    Type C cable<br>
+                    透明保護軟殼</td>
+            </tr>
+            <tr>
+                <td> 使用者介面</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ASUS ZenUI 5.0</td>
+                <td>ASUS ZenUI 6.0</td>
+                <td>ASUS ZenUI 6.0</td>
+                <td>ASUS ZenUI 5.0</td>
+            </tr>
+            <tr>
+                <td> 網路技術標準</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>DSDV/DC-HSPA+/EDGE/FDD-LTE/GSM/GPRS/HSPA+/TD-LTE/WCDMA<br>
+                    <strong>Data Rate:</strong><br>
+                    DC-HSPA+: UL 5.76  / DL 42  Mbps</td>
+                <td>DSDV/DC-HSPA+/EDGE/FDD-LTE/GSM/GPRS/HSPA+/TD-LTE/WCDMA<br>
+                    <strong>Data Rate:</strong><br>
+                    DC-HSPA+: UL 5.76  / DL 42  Mbps</td>
+                <td>WCDMA/TD-SCDMA/FDD-LTE/GSM/TD-LTE/HSPA+/DC-HSPA+/GPRS/EDGE<br>
+                    <strong>Data Rate:</strong><br>
+                    DC-HSPA+: UL 5.76  / DL 42  Mbps<br>
+                    LTE Cat13:UL 150  / DL   Mbps<br>
+                    <strong>A version:</strong><br>
+                    2G:<br>
+                    850/900/1800/1900<br>
+                    3G:<br>
+                    WCDMA: Band: 1/2/5/6/8/19<br>
+                    4G:<br>
+                    <span id="webcam">FDD: Band: 1/2/3/5/7/8/18/19/20/26/28</span><br>
+                    TD: Band: 38/39/40/41<br>
+                    華碩手機各機種分別就該販售地區所要求之相關通訊協定與頻段所設計。 若欲確認非購買地以外地區之相容性，請詳細查閱當地電信商所提供之頻段與服務。
+                    各個地區網路頻率需視電信業者和您所在地區而定。4G LTE 僅限於特定國家/地區可供使用，上傳和下載速度同樣視電信業者而定。</td>
+            </tr>
+            <tr>
+                <td> 網路攝影機</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>前鏡頭 :<br>
+                    雙鏡頭<br>
+                    48百萬畫素, f/1.79 大光圈<br><br>
+                    
+                    輔鏡頭<br>
+                    13百萬畫素<br>
+                    125˚ 超廣角<br>
+                    LED 補光燈<br>
+                    Auto (with HDR+ Enhanced)<br>
+                    景深模式<br>
+                    Pro (RAW file support / up to 32 seconds long exposure)<br>
+                    Super Night<br>
+                    8 種濾鏡<br><br>
+                    
+                    後鏡頭 :<br>
+                    雙鏡頭<br>
+                    48百萬畫素, f/1.79 大光圈<br>
+                    13百萬畫素<br>
+                    125˚ 超廣角<br>
+                    AI scene detection<br>
+                    0.03 秒雷射自動對焦<br>
+                    (Auto) Panorama<br>
+                    Auto (with HDR+ Enhanced)<br>
+                    Pro (RAW file support / up to 32 seconds long exposure)<br>
+                    Super Night<br>
+                    8 種濾鏡</td>
+
+                <td>前鏡頭 :<br>
+                    雙鏡頭<br>
+                    48百萬畫素, f/1.79 大光圈<br>
+                    輔鏡頭<br>
+                    13百萬畫素<br>
+                    125˚ 超廣角<br>
+                    LED 補光燈<br><br>
+                    
+                    Auto (with HDR+ Enhanced)<br>
+                    景深模式<br>
+                    Pro (RAW file support / up to 32 seconds long exposure)<br>
+                    Super Night<br>
+                    8 種濾鏡<br><br>
+                    
+                    後鏡頭 :<br>
+                    雙鏡頭<br>
+                    48百萬畫素, f/1.79 大光圈<br>
+                    13百萬畫素<br>
+                    125˚ 超廣角<br>
+                    AI scene detection<br>
+                    0.03 秒雷射自動對焦<br>
+                    (Auto) Panorama<br>
+                    Auto (with HDR+ Enhanced)<br>
+                    Pro (RAW file support / up to 32 seconds long exposure)<br>
+                    Super Night<br>
+                    8 種濾鏡
+                    </td>
+                <td>前鏡頭 :<br><br>
+
+                    8百萬畫素, f/2.0 大光圈 84˚ 廣角視野, 24 公釐焦距 (35 公釐相機等效焦距)<br><br><br>
+                    
+                    
+                    PixelMaster相機模式:<br>
+                    景深模式<br>
+                    全景自拍, 自拍模式<br>
+                    GIF 動畫<br>
+                    美顏<br>
+                    自動模式<br>
+                    8 種濾鏡<br><br><br>
+                    
+                    後鏡頭 :<br>
+                    雙鏡頭<br>
+                    12百萬畫素, f/1.8 大光圈<br>
+                    8百萬畫素<br>
+                    AI scene detection<br>
+                    AI photo learning<br>
+                    0.03 秒相位對焦<br>
+                    色彩校正（RGB）傳感器最佳白平衡和自然色彩<br>
+                    LED 補光燈<br>
+                    RAW file support<br>
+                    一鍵切換式鏡頭<br>
+                    PixelMaster相機模式:<br>
+                    超高解析度模式(4倍解析度)<br>
+                    GIF 動畫<br>
+                    美顏<br>
+                    自動 (自動偵測低光源及 HDR)<br>
+                    8 種濾鏡<br>
+                    專業模式<br>
+                    延時攝影模式 (搭配省電模式)</td>
+            </tr>
+            <tr>
+                <td> 備註</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="ps">All specifications are subject to change without notice. Specifications and features may vary by region.</td>
+                <td>All specifications are subject to change without notice. Specifications and features may vary by region.</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li>快速選單</li>
+            <li><a href="#color">材質/顏色</a></li>
+            <li><a href="#color">產品尺寸</a></li>
+            <li><a href="#weight">重量</a></li>
+            <li><a href="#system">作業系統</a></li>
+            <li><a href="#cpu">處理器</a></li>
+            <li><a href="#screen">螢幕</a></li>
+            <li><a href="#ram">記憶體</a></li>
+            <li><a href="#storage">儲存效能</a></li>
+            <li><a href="#battery">電池</a></li>
+            <li><a href="#sound">音效</a></li>
+            <li><a href="#video">視訊功能</a></li>
+            <li><a href="#wireless">無線科技</a></li>
+            <li><a href="#other">其他功能</a></li>
+            <li><a href="#sim">SIM卡</a></li>
+            <li><a href="#nfc">NFC</a></li>
+            <li><a href="#sensor">感應器</a></li>
+            <li><a href="#io">I/O連接埠</a></li>
+            <li><a href="#ac">電源AC</a></li>
+            <li><a href="#accessories">配件</a></li>
+            <li><a href="#user">使用者介面</a></li>
+            <li><a href="#net">網路技術標準</a></li>
+            <li><a href="#webcam">網路攝影機</a></li>
+            <li><a href="#ps">備註</a></li>
+            <li><a href="#" class="top">回到頂端</a></li>
+        </ul>
+    </div>
+</body>
+</html>

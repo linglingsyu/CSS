@@ -1,0 +1,18 @@
+
+.addzone > .col-4 {
+    background-color: #ccc;
+    border:2px solid #aaa;
+    margin-bottom: 5px;
+}
+
+.row>*{
+    background-color: #ccc;
+    border:2px solid #aaa;
+    margin-bottom: 5px;
+    min-height: 50px;
+}
+
+.row{
+    opacity: 1;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!--現在用不到 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="p-5">
+    <div class="alert alert-primary w-50">提示文字</div>
+    
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+      </div>
+      <div class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+      <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+      </div>
+      <div class="alert alert-light" role="alert">
+        A simple light alert—check it out!
+      </div>
+      <h4 class="alert-heading text-success ">我是標題</h4>
+      <div class="alert alert-dark" role="alert">
+        A simple dark <a href="#" class="alert-link">an example link</a> alert—check it out!
+      </div>
+<hr>
+    <div class="w-25 alert alert-warning alert-dismissible fade show ">
+        警告！中國人與狗不得進入
+        <button type="button" class="close w-25" data-dismiss="alert" >
+    <!--賦予 data-dismiss="alert"的對象被選取時,會向上層找class名稱是alert的對象進行DOM刪除
+    **data-dismiss是bootstrap自定義的HTML標籤
+    -->
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="w-25 alert alert-danger alert-dismissible fade show " id="demo1">
+        警告！中國人與狗不得進入
+        <button type="button" class="close w-25">
+    <!--賦予 data-dismiss="alert"的對象被選取時,會向上層找class名稱是alert的對象進行DOM刪除
+    **data-dismiss是bootstrap自定義的HTML標籤
+    -->
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <script>
+    setTimeout(() => { 
+        $("#demo1").alert("close");
+    }, 3000);
+
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>

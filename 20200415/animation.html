@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation動畫</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+            flex-direction:column;
+            background-color: #000000;
+
+        }
+        .ani1{
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            position: relative;
+
+            /* 影格名稱(keyframes name)*/
+            animation-name: demo1;
+            /* 動畫總時間 */
+            animation-duration: 1s;
+            /* 速度函式 */
+            animation-timing-function: linear;
+            /* 動畫延遲時間 */
+            animation-delay: 0.5s;
+            /* 播放重複次數 */
+            animation-iteration-count:infinite;
+
+            /* 循環方式 */
+            animation-direction:alternate;
+            /* 停留 */
+            animation-fill-mode: forwards;  
+
+            /*
+            簡寫
+            animation: demo1 1s  ease-in-out 0s 4 alternate forwards; */  
+        
+        }
+
+        @keyframes demo1 {
+                from{
+                    background-color: #f00;
+                    left:0;
+                }
+                to{
+                    background-color: #fa0;
+                    left:50px;
+                }
+            }      
+            .ani1:hover{
+                animation-name: demo1;
+            }
+
+            .ani2{
+                width: 100px;
+                height: 50px;
+                background-color: darkorange;
+                border-radius: 5px;
+                position: relative;
+                text-align: center;
+                line-height: 50px;
+                overflow: hidden;
+                /*偽元素超過ani2的部分隱藏不顯示*/
+            }
+
+            .ani2::after{
+                content:"";
+                background:linear-gradient(
+                    135deg,
+                    transparent 30%,
+                    rgba(255, 255, 255,0.4) 50%,
+                    #ffffff05 70%
+                    );
+                /* background:linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0) 30%,
+                    rgba(255, 255, 255,0.4) 50%,
+                    rgba(255,255,255,0) 70%
+                    ); */
+                position: absolute;
+                width: 100px;
+                height: 50px;
+                left: 0;
+                top: 0;
+                /* left:-100%;
+                top:-100%;
+                right:-100%;
+                bottom:-100%; */
+                /* opacity: 0.5; */
+                transform:translateX(-100%);
+                animation: demo2  2s linear infinite;
+             
+            }
+
+            @keyframes demo2 {
+                50%{
+                    transform:translateX(0%);
+
+                }
+                70%{
+                    transform:translateX(100%);
+                }
+                100%{
+                    transform:translateX(-70%);
+                }
+            }
+
+            .ani3{
+                width: 100px;
+                text-align: center;
+                position: relative;
+            }
+
+            .ani3::before,.ani3::after{
+                content: "";
+                border: 1px solid #ffffff;
+                position: absolute;
+                left:-100px;
+                right: -100px;
+                top: -0.5rem;
+                bottom: -0.5rem;
+                z-index: -1; /*讓loading字在最前面*/
+            }
+
+            .ani3::after{
+                animation: demo3 5s linear 1 forwards;
+            }
+
+            @keyframes demo3 {
+                0%{
+                    right: 200px;
+                }
+                30%,75%{
+                    background-color: rgb(119, 45, 26);
+                }
+                50%{
+                    background-color: rgb(212, 23, 23);
+                }
+                100%{
+                    background-color: rgb(113, 201, 63);
+                }
+            }
+
+            .ani4{
+                font-size: 3rem;
+                font-family: Arial, Helvetica, sans-serif;
+                text-transform: uppercase; /*轉大寫*/
+                letter-spacing: 1rem; /*字的間距*/
+                border:1px solid #fff;
+                padding: 10px 0px 10px 1rem; 
+                /*因為間距的關係，I右邊會有1rem的間距 所以左邊的padding也加1rem*/
+                animation: demo4_text 5s linear infinite,demo4_text 10s linear infinite;
+
+                
+            }
+
+            @keyframes demo4_text {
+                0%,100%{
+                    text-shadow:
+                     0px 0px 3rem #ff0000ff,
+                     1px 1px 3rem #ff0000FF;
+                }
+
+                33%{
+                    text-shadow: 
+                    0px 10px 3rem #00ff00ff,
+                    10px 10px 3rem #00ff00FF;
+                }
+
+                66%{
+                    text-shadow:
+                     0px 0px 3rem #0000ffff,
+                    0px 0px 3rem #0000ffFF;
+                } 
+                
+            }
+
+            @keyframes demo4_text {
+
+                0%{
+                    box-shadow: 
+                0px 0px 1rem 5px #f00, 
+                0px 0px 1rem 15px #ff000088,
+                inset 0px 0px 1rem 5px #f00;
+                }
+
+                12.5%{
+                    box-shadow: 
+                0px 0px 1rem 5px rgb(255, 115, 0), 
+                0px 0px 1rem 15px rgba(255, 115, 0,0.7),
+                inset 0px 0px 1rem 5px rgb(255, 115, 0);
+
+                }
+
+                25%{
+                    box-shadow: 
+                0px 0px 1rem 5px rgb(199, 216, 48), 
+                0px 0px 1rem 15px rgba(199, 216, 48,0),
+                inset 0px 0px 1rem 5px rgb(199, 216, 48);
+
+                }
+
+                37.5%{
+                    box-shadow: 
+                0px 0px 1rem 5px rgb(46, 175, 63), 
+                0px 0px 1rem 15px rgba(46, 175, 63,0.7),
+                inset 0px 0px 1rem 5px rgb(46, 175, 63);
+                }
+
+                50%{
+                    
+                        box-shadow: 
+                0px 0px 1rem 5px rgb(20, 146, 36), 
+                0px 0px 1rem 15px rgba(20, 146, 36,0),
+                inset 0px 0px 1rem 5px rgb(20, 146, 36);
+                
+                }
+
+                62.5%{
+                    box-shadow: 
+                0px 0px 1rem 5px rgb(45, 77, 223), 
+                0px 0px 1rem 15px rgba(45, 77, 223,0.7),
+                inset 0px 0px 1rem 5px rgb(45, 77, 223); 
+                }
+
+                87.5%{
+                    box-shadow: 
+                0px 0px 1rem 5px rgb(119, 56, 179), 
+                0px 0px 1rem 15px rgba(119, 56, 179,0),
+                inset 0px 0px 1rem 5px rgb(119, 56, 179); 
+                }
+
+                100%{
+                    box-shadow: 
+                0px 0px 1rem 5px #f00, 
+                0px 0px 1rem 15px #ff000077,
+                inset 0px 0px 1rem 5px #f00;
+                }
+
+                }
+
+
+
+                
+ 
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="ani1">Hello world</div>
+    <div class="ani2">Button</div>
+    <div class="ani3">loading</div>
+    <div class="ani4">Loki</div>
+</body>
+</html>

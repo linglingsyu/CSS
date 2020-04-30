@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 960px;
+            background-color: lightcoral;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .col{
+            box-sizing: border-box;
+            width: 320px;
+            border: 1px solid lightgreen;
+            padding: 10px;
+            float: left;
+            margin: 10px;
+
+        }
+        .clrbox{
+            width: 960px;
+            background-color:yellowgreen;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        .clearfix::after,.clearfix::before{
+            content: "";
+            clear: both;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- .container>div.col*3 -->
+    <div class="container　clearfix">
+        <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at delectus, ut vitae perferendis velit eos dolorum impedit autem error. Ab reiciendis quae tenetur sed maiores id eaque veritatis. Consectetur est quae magni, id nihil ad ullam repudiandae cum excepturi asperiores distinctio incidunt nulla quod suscipit laboriosam cumque atque veritatis?</div>
+        <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at delectus, ut vitae perferendis velit eos dolorum impedit autem error. Ab reiciendis quae tenetur sed maiores id eaque veritatis. Consectetur est quae magni, id nihil ad ullam repudiandae cum excepturi asperiores distinctio incidunt nulla quod suscipit laboriosam cumque atque veritatis?</div>
+        <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at delectus, ut vitae perferendis velit eos dolorum impedit autem error. Ab reiciendis quae tenetur sed maiores id eaque veritatis. Consectetur est quae magni, id nihil ad ullam repudiandae cum excepturi asperiores distinctio incidunt nulla quod suscipit laboriosam cumque atque veritatis?</div>
+    </div>
+    <div class="clrbox"></div>
+    
+</body>
+</html>

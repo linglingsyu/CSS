@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉場</title>
+    <style>
+      
+        body{
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh; 
+            /*100vh = 在沒設高度的狀況下body以內容為高度
+            不會有垂直置中的視覺效果,所以加個高*/
+          
+
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color:darkseagreen;
+            line-height: 100px;
+            position: relative;
+          
+          
+        }
+
+        .box:after{
+            content:"Transition";
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left:0;
+            top:0;
+            background: darkred;
+            opacity: 0.3;
+            transform-origin: left top;
+            transition: opacity 1s ease 2s,
+                        width 1s ease 2s,
+                        background-color 1s ease 4s,
+                        transform 1s ease 3s,
+                        top 1s ease 4s
+            ;
+        }
+
+
+         .box:hover::after{
+            width: 300px;
+            background-color:darkorange;
+            opacity: 1;
+            transform: rotate(90deg);
+            top:100%;
+        } 
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">Befult</div>
+</body>
+</html>

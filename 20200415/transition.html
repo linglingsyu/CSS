@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉場</title>
+    <style>
+        /* transition是指某個css外觀A突然變成另一個外觀B時,呈現出來的轉場效果 */
+        body{
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh; 
+            /*100vh = 在沒設高度的狀況下body以內容為高度
+            不會有垂直置中的視覺效果,所以加個高*/
+          
+  
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color:darkseagreen;
+            line-height: 100px;
+            position: relative;
+          
+            /* transition: all 1s ease-in 0.5s;　 */
+            transition: background-color 1s ease-in 2s, widch 3s ease-out 0.5s;　
+              /* 放在:hover內時，只有起頭有效果，離去沒有效果 */
+            /* 
+            transition-property: background,width; 　all: 對所有css屬性都有效果
+            transition-duration:1s,3s ;
+            transition-timing-function: ease,ease;
+            
+              轉場方式
+            　ease:先加速再放慢 ;
+           　 ease-in:慢慢加速
+           　 ease-out:
+           　 ease-in-out: 頭尾慢 中間快
+           　 linear:線性
+            　也可以用chrome F12去拉貝茲曲線做自己想要的效果
+            transition-delay:2s 0.5s ; 
+            */
+        }
+
+        .box:hover{
+            width: 200px;
+            background-color:darkred;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box active">Befult</div>
+</body>
+</html>

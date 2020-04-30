@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+
+        .container{
+            background-color: lightgray;
+            display: flex;
+            height: 500px;
+        }
+        .container>div{
+            width: 200px;
+        }
+
+        /*子項目flex item
+        flex: 0 1 auto (為預設值)
+        flex: flex-grow / flex-shrick / flex-basis
+        flex:膨脹係數/收縮係數/基本空間
+
+        基本空間優先權
+        flex-basic > width > content
+        
+        */
+        .red{
+            background-color: lightpink;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
+        }
+        .green{
+            background-color: lightgreen;
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+        }
+
+        .blue{
+            background-color: lightskyblue;
+            /* flex-grow: 3; */
+            flex-shrink: 3;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+        <div class="item blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, inventore.</div>
+
+    </div>
+</body>
+</html>

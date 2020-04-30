@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body{
+            margin: 0;
+            font-size: 0;
+        }
+        .container{
+            background-color: lightcoral;
+        }
+        .card{
+            font-size: 1rem;
+            border: 1px solid #000;
+            width: 30%;
+            display: inline-block;
+            margin: 30px 1%;
+            background-color: rgb(96, 146, 49);
+
+        }
+
+        .box{
+            width: 50px;
+            height:50px;
+            background-color: turquoise;
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1rem;
+            display: inline-block;
+
+        }
+
+        .bigbox{
+            width: 300px;
+            height: 240px;
+            background-color: #ccc;
+            border:1px solid #000;
+            font-size: 0;
+            margin:calc(50vh - 121px) auto;
+            position: relative;
+        }
+
+        .rel{
+            background-color: lightskyblue;
+            position:relative;
+            left:-90px;   /*  right:25px;*/
+            top:25px;
+            z-index: -2;
+        }
+
+        .abs{
+            background-color:lightgreen;
+            position:absolute;
+            left:-25px;
+            top:50px;
+            z-index: -1;
+        }
+
+        .fix{
+            background-color: lightseagreen;
+            position: fixed;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="container">
+        <div class="card">
+            <span class="abs aaa">new</span>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquid ipsam fuga, delectus vel quos
+                voluptatum itaque consectetur libero modi non doloremque quisquam deserunt necessitatibus at, deleniti,
+                sit incidunt suscipit.</p>
+        </div>
+        <div class="card">
+            <span class="abs">new</span>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquid ipsam fuga, delectus vel quos
+                voluptatum itaque consectetur libero modi non doloremque quisquam deserunt necessitatibus at, deleniti,
+                sit incidunt suscipit.</p>
+        </div>
+        <div class="card">
+            <span class="fix">fix</span>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquid ipsam fuga, delectus vel quos
+                voluptatum itaque consectetur libero modi non doloremque quisquam deserunt necessitatibus at, deleniti,
+                sit incidunt suscipit.</p>
+        </div>
+    </div> -->
+
+<div class="bigbox">
+    <div class="box">01</div>
+    <div class="box">02</div>
+    <div class="box">03</div>
+    <div class="box">04</div>
+    <div class="box">05</div>
+    <div class="box">06</div>
+    <div class="box rel">07</div>
+    <div class="box">08</div>
+    <div class="box abs">09</div>
+    <div class="box">10</div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+    <div class="box fix" style="top:0">13</div>
+    <div class="box">14</div>
+    <div class="box fix">15</div>
+    <div class="box">16</div>
+    <div class="box">17</div>
+    <div class="box">18</div>
+    <div class="box fix" style="top:5">19</div>
+    <div class="box">20</div>
+</div>
+
+
+
+</body>
+
+</html>

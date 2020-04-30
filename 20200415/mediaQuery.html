@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=mediu, initial-scale=1.0">
+    <title>mediaQuery媒體查詢</title>
+
+    <style>
+
+        @media (min-width:319px){
+            body{
+                background-color: lightpink;
+            }
+        }
+
+        @media (min-width:320px) and (max-width:549px){
+            body{
+                background-color: lightsalmon;
+            }
+        }
+
+        @media (min-width:550px) and (max-width:767px){
+            body{
+                background-color: lightgreen;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:959px){
+            body{
+                background-color: lightgray;
+            }
+        }
+
+        @media (min-width:960px){
+            body{
+                background-color:lightslategrey
+            }
+            .box{
+            width: 45% !important;
+            float:left;
+            }
+        }
+
+        .body{
+            margin: 0;
+        }
+
+        .box{
+            height: 50px;
+            background-color: maroon;
+            width:95%;
+            margin: 2.5%;
+        }
+     
+
+
+    </style>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</body>
+</html>

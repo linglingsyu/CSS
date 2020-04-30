@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Plugins/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row addzone">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            row是flexbox可以自行增加col~
+          </div>
+        </div>
+      </div>
+
+<!-- gird以12欄為分配 若你希望畫面塞滿應該塞滿12
+    number 1~12自行定義 以3為倍數為佳  一行常見就是6-6  3-3-3-3分配
+
+-->
+      <div class="container">
+        <div class="row addzone">
+          <div class="col-6">A</div>
+          <div class="col-3">B</div>
+          <div class="col-3">C</div>
+          <div class="col-6">空間分配完就擠壓到下一行</div>
+        </div>
+      </div>
+<hr>
+      <div class="container">
+        <div class="row addzone">
+          <div class="col-4">AAA</div>
+          <div class="col-4">AAA</div>
+          <div class="w-100"></div>
+          <div class="col-4">AAA</div>
+          <div class="col-4">AAA</div>
+        </div>
+      </div>
+<hr>
+      <div class="container">
+        <div class="row addzone">
+          <div class="col-6">AA先分配給6</div>
+          <div class="col-auto">auto會自己算,內容多寬他就多寬</div>
+          <div class="col-3">上面的剩餘空間給col-3</div>
+          <div class="col">上面空間分配完了空間不夠就會跑到下一行</div>
+
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+      </div>     
+</body>
+
+</html>

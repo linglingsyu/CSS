@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <style>
+        .demo {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button type="button" class="close text-info" aria-label="Close">
+        <span aria-hidden="true">關閉</span>
+    </button>
+
+    <!-- aria-label 是一個 HTML attribute，用來告訴讀屏軟件某個元素是什麼。例如一個關閉按鈕「×」，視覺上看來都能理解，但是讀屏軟件並不能正確讀出，這時就可以用 aria-label 告訴它：
+<button aria-label="關閉">&times;</button>
+讀屏軟件（比如說 Voice Over）就會讀出「按鈕，關閉」。圖片 <img> 的 alt 屬性亦有此效果，因為圖片本身是沒有辦法被讀出的，所以讀屏軟件會去閱讀 alt 的內容。
+假如 <img> 標籤同時有 aria-label 與 alt 屬性，那麼讀屏軟件應該閱讀哪個的內容呢？答案當然是 aria-label。這裡需要明白 alt 本身還有另一個作用，當圖片無法加載時，瀏覽器會將 alt 的內容展示給用戶。 -->
+
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/3wvoDxZq52w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3wvoDxZq52w" allowfullscreen></iframe>
+    </div> -->
+
+    <!-- 延伸連結 -->
+    <div class="card" style="width: 18rem;">
+        <img src="//e.ecimg.tw/items/DGBJH21900AMUDO/000001_1588144521.jpg" class="card-img-top" alt="123">
+        <div class="card-body">
+            <h5 class="card-title">搶購一波搶起來!!</h5>
+            <p class="card-text">4/30 11點一秒秒殺XD </p>
+            <a href="https://24h.pchome.com.tw/prod/DGBJH2-1900AMUDO?fq=/S/DGBJH2" target="_blank"
+                style="font-size: 12px;" class="btn btn-primary stretched-link">去搶吧! 我把主機放在pchome了</a>
+        </div>
+    </div>
+
+    <!-- Block level -->
+    <div class="row">
+        <div class="col-2 text-truncate">
+            Praeterea iter est quasdam res quas ex communi.
+        </div>
+    </div>
+
+    <!-- Inline level -->
+    <span class="d-inline-block text-truncate" style="max-width: 150px;">
+        Praeterea iter est quasdam res quas ex communi.
+    </span>
+
+    <div class="demo">
+        <div class="visible">看的到</div>
+        <div class="invisible">看不到</div>
+    </div>
+
+
+</body>
+
+</html>
