@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="p-5">
+
+
+
+    <hr>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myid">
+        touch me
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="myid" tabindex="-1" data-backdrop="static" data-keyboard="false">
+        <!-- 使用tabindex屬性設定tab鍵在表單控制項中的移動順序，tab鍵移動順序將由tabindex中所設定的數值依序移動 
+        -1代表不會在鍵盤找到他
+        data-backdrop="static 點開按鈕後黑色的背景就不能有關閉的效果了
+        data-keyboard="false" 不能用ESC退出  true->可以
+        ->
+        -->
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+        <!-- 第三層開始才是內容 -->
+                <div class="modal-header">
+                    <h5 class="modal-title">你確定要送出嗎</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet aliquid beatae consequuntur nulla consectetur voluptate modi ea, perspiciatis quod ratione rerum hic magni atque odit suscipit perferendis animi porro repellat qui asperiores eos aperiam. Aliquam alias quis dolor doloribus eos, laboriosam minus, velit natus inventore voluptate neque modi nesciunt est, adipisci tempore praesentium molestiae consectetur accusamus. Ex, quae veniam quam impedit, omnis voluptatem perspiciatis obcaecati nulla deleniti et sapiente ducimus excepturi culpa odit! Dolorum quidem atque laudantium perspiciatis perferendis adipisci sequi commodi minima libero ad, asperiores ea deleniti, odit nihil alias cupiditate architecto at rerum dolores quam blanditiis consequuntur debitis. Dignissimos expedita repudiandae assumenda provident asperiores adipisci eos minima similique delectus corporis eum dolores quia molestiae ab vitae eligendi, sequi nam quam, necessitatibus rerum ad quas sed itaque porro. Iure est illo eligendi temporibus harum odio reprehenderit earum alias nisi et rerum fuga, incidunt quos. Quidem porro, suscipit fugit dolor temporibus dicta ut maiores architecto perspiciatis asperiores culpa laboriosam beatae vitae quibusdam distinctio ab commodi, assumenda, quo fugiat voluptatum officiis. Commodi tenetur quibusdam asperiores est molestias facere enim inventore. Ducimus impedit voluptatibus quidem eaque veniam. Neque praesentium molestiae nihil eos eaque, quam voluptate tenetur fugiat alias modi ipsum dolorum!
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    <!-- data-dismiss=做關閉要加這個屬性 -->
+                    <button type="button" class="btn btn-primary">儲存</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form表單</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vw-100 vh-100 flex-column">
+
+    <!-- <form>
+        <div class="form-group">
+          <label for="labelmail">Email address</label>
+          <input type="email" class="form-control" id="labelmail">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="labelpw">Password</label>
+          <input type="password" class="form-control" id="labelpw">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="labelCheck">
+          <label class="labelCheck" for="exampleCheck1">記住我</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
+
+    <form class="w-75">
+
+        <div class="form-group d-block">
+            <label>
+                <div class="mb-2"> Email address</div>
+                <input type="email" class="form-control" placeholder="name@example.com">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="select">Example select</label>
+            <select class="form-control" id="select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+        </div>
+        <div class="form-group">
+            <label for="file">Example file input</label>
+            <input type="file" class="form-control-file" id="file">
+        </div>
+
+        <div class="form-group">
+            <label for="Range">Example Range input (0~100)</label>
+            <input type="range" class="form-control-range" id="Range" min="0" max="100">
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck">
+            <label class="form-check-label" for="defaultCheck">
+                Default checkbox
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                Default checkbox
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+            <label class="form-check-label" for="defaultCheck2">
+                Disabled checkbox
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Second default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="exampleRadios3" value="option3" disabled>
+            <label class="form-check-label" for="exampleRadios3">
+              Disabled radio
+            </label>
+          </div>
+    </form>
+
+</body>
+
+</html>

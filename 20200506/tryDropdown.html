@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown下拉式選單</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vw-100 vh-100 flex-column">
+    <!-- <h4>箭頭是用偽類別生成的.dropdown-toggle::after</h4>
+    <h4>dropup如果空間不夠會往下面擠</h4> -->
+    <div class="dropdown">
+        <div class="btn-group dropright">
+            <button class="btn btn-secondary">產品訊息</button>
+            <a class="btn btn-secondary dropdown-toggle btn-lg" type="button" data-toggle="dropdown"></a>
+            <div class="dropdown-menu">
+                <span class="dropdown-item-text">純文字效果</span>
+                <a class="dropdown-item active" href="#">麵類</a>
+                <a class="dropdown-item disabled" href="#">肉類</a>
+                <a class="dropdown-item " href="#">其他</a>
+            </div>
+        </div>
+    </div>
+<hr>
+
+    <div class="btn-group dropleft">
+        <a class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">產品訊息</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">麵類</a>
+            <a class="dropdown-item" href="#">肉類</a>
+            <a class="dropdown-item" href="#">其他</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
