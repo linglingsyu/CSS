@@ -81,7 +81,7 @@ footer .position-fixed {
   /* ================= 房型介紹區menu*/
 
 #lingroom nav a{
-    flex: 0 1 15%;     /*不膨脹 / 收縮 / 基本空間15%  */
+    flex: 0 1 12%;     /*不膨脹 / 收縮 / 每個標籤基本空間  */
     box-shadow: 3px 0px 5px #ccc;
     transition: all  0.5s linear ;
 }
@@ -100,8 +100,17 @@ footer .position-fixed {
 
   /* ================= 房型介紹區card*/
 
-  /* 代表tab-content下一層同時有tab-pane以及active的才套用 */
-#lingroom .tab-content >.tab-pane.active{
+
+  /*
+room這個區域 預設.tab-content>.active為block
+我們要讓它變成flexbox所以有包一層row.
+然後強制將#lingroom .tab-content > .row.active都改成flexbox
+因為price&rule區塊要用block顯示,這邊沒有包一層row. 所以還是會套用預設的block而不會套用到flex
+*/
+  /* 代表tab-content下一層同時有row以及active的才套用*/
+#lingroom .tab-content > .row.active{
   display: flex;
-  flex-direction: column;
 }
+ 
+
+
