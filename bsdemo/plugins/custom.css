@@ -1,0 +1,107 @@
+body{
+    font-family:'Open Sans',Arial, 'Noto Sans TC', "Microsoft JhengHei" , sans-serif;
+    background-color: #eee;
+
+
+}
+
+/* =============輪播區=============== */
+
+#lingslider img{
+/*
+設定img讓它填滿置中
+object-fit決定了像img和videos這樣的替換元素的內容應該如何使用他的寬度和高度來填充其容器。
+fill(預設值:會強制變形至 css 所定義的元素寬高，不管原檔比例。) 
+cover  填滿元素的寬度及高度(維持原比例
+none不做任何大小及比例調整
+scale-down將會選擇設為 none 或 container 兩者間較小的那個物件
+
+ filterCSS濾鏡
+ blur:模糊
+ grayscale:網頁元素轉換成黑白影像
+ (括號裡可以使用0% 到100%的百分比控制、也可以使用0至1的數字控制。
+ 0和0%表示顏色不變、1和100%則是沒有任何色彩的黑白影像。)
+ 模糊效果會產生白邊,要不要用看自己
+*/
+ object-fit: cover;
+ filter:blur(3px) grayscale(0.3);
+}
+
+#lingslider .carousel-caption{
+    top:0;
+    bottom:0;
+    text-shadow: 5px 3px 15px rgb(0,0,0);
+}
+
+#lingslider a{
+    text-shadow: 3px 3px 10px #979494; 
+}
+
+/*修改輪播下方圖示為圓形*/
+#lingslider .carousel-indicators li{
+    width: 17px;
+    height: 17px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+/* =============footer區=============== */
+
+/* 回到最上方按鈕 */
+footer .position-fixed {
+    bottom:3vh;
+    right:5vh;
+    z-index: 999;
+    animation: topjump 2s ease-in-out infinite;
+}
+@keyframes topjump {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate(0, 0);
+    }
+    40%,
+    43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate(0, -30px);
+    }
+  
+    70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate(0, -15px);
+    }
+    90% {
+      transform: translate(0, -4px);
+    }
+  }
+
+  /* ================= 房型介紹區menu*/
+
+#lingroom nav a{
+    flex: 0 1 15%;     /*不膨脹 / 收縮 / 基本空間15%  */
+    box-shadow: 3px 0px 5px #ccc;
+    transition: all  0.5s linear ;
+}
+
+#lingroom nav .active{
+    background-color: rgb(80, 175, 204);
+}
+
+#lingroom nav .nav-link{
+    border:none;
+}
+
+#lingroom nav.nav-tabs{
+  border-bottom:1px solid #17a2b8;
+}
+
+  /* ================= 房型介紹區card*/
+
+  /* 代表tab-content下一層同時有tab-pane以及active的才套用 */
+#lingroom .tab-content >.tab-pane.active{
+  display: flex;
+  flex-direction: column;
+}
