@@ -47,6 +47,7 @@ scale-down將會選擇設為 none 或 container 兩者間較小的那個物件
 
 /* =============footer區=============== */
 
+
 /* 回到最上方按鈕 */
 footer .position-fixed {
     bottom:3vh;
@@ -111,6 +112,71 @@ room這個區域 預設.tab-content>.active為block
 #lingroom .tab-content > .row.active{
   display: flex;
 }
- 
+
+/* ================= 房價區 讓每隔都固定25%寬度(不然他會自己依內容寬度會自己抓) */
+#roomPrice td{
+  width: 25%;
+}
 
 
+/* ================= 服務項目區*/
+
+#lingfacility{
+  background: url("https://picsum.photos/1920/1080/?random=1") no-repeat,
+  linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background-blend-mode: color-burn; /*雙背景融合的模式*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media (min-width: 992px) {
+  /* 在服務項目在lg模式下 偶數li的圖片要改到右邊 order數字越大會放越右邊(flexbox) */
+  #lingfacility li:nth-of-type(even) img{
+    order:1;
+  }
+ }
+
+ #lingfood #fimg1,#lingfood #fimg2,#lingfood #Fimg3{
+  border-width: 2px  !important;
+}
+
+
+#lingmap iframe{
+  filter: brightness(0.5);
+}
+
+
+.navlink{
+  transition: all 1000ms ease-in;
+}
+
+/*for scroll spy*/
+#mymenu a:after{
+  content:"";
+  display: block;
+  height:2px;
+  width:0%;
+  background:#fff;
+  margin:5px;
+  transition: width 1s ease ;
+  opacity: 0;
+}
+
+#mymenu a.active:after{
+  width: 100%;
+  opacity: 1;
+}
+
+header{
+  transition: 1s ease;
+}
+
+#scrollt{
+  opacity: 0;
+  transition: 1s ease;
+}
+
+#scrollt .shown{
+  opacity: 1;
+}
